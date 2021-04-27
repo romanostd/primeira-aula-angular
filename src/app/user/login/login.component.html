@@ -1,0 +1,11 @@
+    <mat-card class="container">
+        <h1>Cadastro</h1>
+        <form [formGroup]="form" >
+            <mat-form-field>
+            <input matInput type="text" placeholder="Usuario" formControlName="user">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" placeholder="senha" formControlName="password">
+            </mat-form-field>
+        </form>
+    </mat-card>
