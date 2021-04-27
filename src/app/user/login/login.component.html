@@ -1,7 +1,7 @@
 <mat-card class="container">
     <form [formGroup]="form">
         
-        <mat-card-header style="display: flex; flex-direction: column; align-items: center;">
+        <mat-card-header>
             <mat-card-title>Fazer Login</mat-card-title>
         </mat-card-header>
 
@@ -13,7 +13,7 @@
             <input matInput type="password" placeholder="Senha" formControlName="password">
         </mat-form-field>
 
-        <button mat-flat-button color="accent" (click)="login()">Entrar</button><br>
+        <button mat-flat-button color="primary" (click)="login()">Entrar</button><br>
         <button mat-flat-button color="warn" routerLink="/user">Registre aqui</button>
 
     </form>

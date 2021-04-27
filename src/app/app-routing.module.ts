@@ -15,7 +15,7 @@ const routes: Routes = [
     [
       {path: 'one', component: PageoneComponent},
       {path: 'two', component: PagetwoComponent},
-      {path: 'three', component: PagetreeComponent}
+      {path: 'tree', component: PagetreeComponent}
     ]
   }
 ];

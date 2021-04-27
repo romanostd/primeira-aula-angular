@@ -1,5 +1,5 @@
 <mat-card class="container">
-    <mat-card-header style="display: flex; flex-direction: column; align-items: center;">
+    <mat-card-header>
         <mat-card-title>Registrar</mat-card-title>
     </mat-card-header>
     <form [formGroup]="form">
@@ -28,7 +28,7 @@
             <input matInput type="text" placeholder="Telefone" formControlName="phone" ui-mask="(99)9?9999-9999">
         </mat-form-field>
 
-        <button mat-flat-button color="accent" (click)="registrar()">Registrar</button><br>
+        <button mat-flat-button color="primary" (click)="registrar()">Registrar</button><br>
         <button mat-flat-button color="warn" routerLink="/user/login">Ja passuo login</button>
 
     </form>
