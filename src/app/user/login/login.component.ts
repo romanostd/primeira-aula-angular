@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { User } from '../user.model';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,26 +10,26 @@ import { Validators } from '@angular/forms';
 })
 export class LoginComponent {
 
-  usuario : userModels; 
-  form : FormGroup = this.formBuilder.group({
-    user: ['',[Validators.required]],
-    firstName: ['',[]],
-  });
+  user?: User;
+  form: FormGroup = this.formBuilder.group({
+    userName: ['', [Validators.required]],
+    password: ['', [Validators.required]],
+  })
+  constructor(  private formBuilder: FormBuilder, 
+                private NomeServico: UserService) { }
 
-    constructor (private formBuilder:FormBuilder , private service: UserService,){
-    }
+  ngOnInit(): void {
+  }
 
   async login(){
     if (this.form.invalid) return;
-      const username = this.form.controls.username.value;
-      const password = this.form.controls.password.value;
+    const userName = this.form.controls.userName.value;
+    const password =  this.form.controls.password.value;
 
-      await this.service.login(username, password);
+    await this.NomeServico.login(userName, password);
 
-      console.log(this.service.usuarioAcesso);
-      this.usuario = this.service.usuarioAcesso;
+    console.log(this.NomeServico.usuarioAcesso);
+    this.user = this.NomeServico.usuarioAcesso;
   }
- 
 
-}        
-
+}

@@ -1,26 +1,37 @@
 <mat-card class="container">
-    <h1>Cadastro</h1>
-    <form [formGroup]="form" >
+    <mat-card-header style="display: flex; flex-direction: column; align-items: center;">
+        <mat-card-title>Registrar</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="form">
+
         <mat-form-field>
-        <input matInput type="text" placeholder="nome de usuario" formControlName="user">
+            <input matInput type="text" placeholder="Nome do usuario" formControlName="userName">
         </mat-form-field>
+
         <mat-form-field>
             <input matInput type="text" placeholder="Primeiro nome" formControlName="firstName">
         </mat-form-field>
-        <mat-form-field>  
-            <input matInput type="text" placeholder="ultimo nome" formControlName="lastName">
+
+        <mat-form-field>
+            <input matInput type="text" placeholder="Ultimo Nome" formControlName="lastName">
         </mat-form-field>
-        <mat-form-field>  
-            <input matInput type="text" placeholder="email" formControlName="email">
+
+        <mat-form-field>
+            <input matInput type="text" placeholder="Email" formControlName="email">
         </mat-form-field>
-        <mat-form-field>  
-            <input matInput type="text" placeholder="senha" formControlName="password">
-        </mat-form-field>    
-        <mat-form-field> 
-            <input matInput type="text" placeholder="telefone" formControlName="phone"> 
-        </mat-form-field>  
-        <button mat-raised-button color="primary" (click)="registrar()">Update Name</button>  
+
+        <mat-form-field>
+            <input matInput type="password" placeholder="Senha" formControlName="password">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="text" placeholder="Telefone" formControlName="phone" ui-mask="(99)9?9999-9999">
+        </mat-form-field>
+
+        <button mat-flat-button color="accent" (click)="registrar()">Registrar</button><br>
+        <button mat-flat-button color="warn" routerLink="/user/login">Ja passuo login</button>
+
     </form>
 </mat-card>
 
-  {{usuario|json}}
+{{usuario | json}}
