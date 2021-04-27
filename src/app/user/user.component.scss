@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+    flex-flow: column nowrap;
+    margin-top: 100px;
+    padding: 20px;
+}
