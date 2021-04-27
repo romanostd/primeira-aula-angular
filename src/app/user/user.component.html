@@ -1,1 +1,13 @@
-<p>user works!</p>
+<form [formGroup]="form">
+  
+      <input type="text" placeholder="nome de usuario" formControlName="user">
+      <input type="text" placeholder="Primeiro nome" formControlName="firstName">
+      <input type="text" placeholder="ultimo nome" formControlName="lastName">
+      <input type="text" placeholder="email" formControlName="email">
+      <input type="text" placeholder="senha" formControlName="password">
+      <input type="text" placeholder="telefone" formControlName="phone">  
+      <button (click)="registrar()">Update Name</button>  
+  
+  </form>
+
+  {{usuario|json}}
