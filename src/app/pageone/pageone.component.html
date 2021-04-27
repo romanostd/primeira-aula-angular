@@ -1,0 +1,22 @@
+<p>page-one works!</p>
+
+<button (click)="adicionar()">adicionar</button>
+<button (click)="remover()">remover</button>
+<button (click)="remover(10)">remover 10</button>
+
+
+<div>
+{{flag}}
+</div>
+
+<div>
+    {{flag * 10}}
+</div>
+
+<div *ngIf="flag === 15;else naoEIgual">
+    {{flag * 10}}
+    é igual a 15
+</div>
+<ng-template #naoEIgual>
+    Não é igual a 15
+</ng-template>

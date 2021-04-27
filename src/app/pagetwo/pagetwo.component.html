@@ -1,0 +1,13 @@
+<p>page-two works!</p>
+
+<div>
+    <input type="text" placeholder="Nome" #name>
+    <input type="text" placeholder="Descrição" #descricao>
+    <button (click)="adicionarHero(name.value, descricao.value)">Adicionar</button>
+</div>
+
+<div>
+    <ng-container *ngFor="let hero of lista">
+        <app-hero [name]="hero.name" [descricao]="hero.descricao"></app-hero>
+    </ng-container>
+</div>
