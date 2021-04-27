@@ -5,7 +5,10 @@ import { PageoneComponent } from './pageone/pageone.component';
 import { PagetreeComponent } from './pagetree/pagetree.component';
 import { PagetwoComponent } from './pagetwo/pagetwo.component';
 
+
 const routes: Routes = [
+    
+  { path: 'user' , loadChildren: () => import('./user/user.module').then(m =>m.UserModule)},
 
   {
     path: '', component: HomeComponent, children:
